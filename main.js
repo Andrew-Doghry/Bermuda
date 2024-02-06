@@ -7,6 +7,9 @@ const errorHandler = require("./middleWares/errorHandler")
 const notFound = require("./middleWares/notFound")
 const path = require("path")
 const Logger = require("./middleWares/loggerMiddleware")
+const { default: mongoose, mongo } = require("mongoose")
+const connect = (require("./config/DBConn"))
+connect()
 app.use(Logger)
 app.use(express.json())
 app.use(express.static(path.join(__dirname, "public")))
@@ -16,6 +19,9 @@ app.all('*', notFound)
 app.use(errorHandler)
 app.use("/test", (req, res) => {
 })
-app.listen(process.env.PORT, () => {
-    console.log("listening to port :", process.env.PORT)
+mongoose.connection.once("open", () => {
+    console.log("connection to db established ")
+    app.listen(process.env.PORT, () => {
+        console.log("listening to port :", process.env.PORT)
+    })
 })

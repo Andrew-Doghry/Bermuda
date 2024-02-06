@@ -1,8 +1,8 @@
-const { getHomeInfo } = require('../controler/homeControler')
+const { createNewUser } = require('../controler/registerControler')
 const router = require('express').Router()
 
 
-router.route('/').get(getHomeInfo)
+router.route('/').get(createNewUser)
 module.exports = router
 
 

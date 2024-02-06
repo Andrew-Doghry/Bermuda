@@ -8,6 +8,9 @@ const logItems = async (message, fileName) => {
     console.log(item)
     const thePath = path.join(__dirname, '../logs', fileName)
     try {
+        if (!fs.existsSync(path.join(__dirname, "../logs"))) {
+            await fsPromises.mkdir(path.join(__dirname, "../logs"));
+        }
         if (!fs.existsSync(thePath)) {
             await fsPromises.writeFile(thePath, item + "\n", { encoding: 'utf-8' })
         } else {

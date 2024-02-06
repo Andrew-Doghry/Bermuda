@@ -1,2 +1,5 @@
-2024/01/30  12:30:05	undefined	/	GET	ERROR:origin not allowed  
-2024/01/30  12:32:50	undefined	/	GET	ERROR:origin not allowed  
+2024/01/30  03:18:42	82e238da-5d1e-4b95-ad57-c774a822469e	undefined	/	GET	ERROR: origin not allowed  
+2024/02/06  12:36:43	40cc78ed-6fe3-458c-b486-941f9882ba5e	undefined	/	GET	ERROR: origin not allowed  
+2024/02/06  12:46:27	457a5417-7b41-43a9-982f-12632f045545	undefined	/	GET	ERROR: Cannot access 'user' before initialization 
+2024/02/06  12:46:30	6bd69d65-83d7-4435-9b6b-75f2d4b7de76	undefined	/	GET	ERROR: Cannot access 'user' before initialization 
+2024/02/06  12:47:40	48258134-24ea-4829-970f-963247d4f9ec	undefined	/	GET	ERROR: Unexpected token } in JSON at position 35 
